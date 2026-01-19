@@ -1,0 +1,148 @@
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(2, 6, 27, 0.9);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* LOGO */
+.nav-logo {
+  width: 160px;
+  transition: 0.4s ease;
+}
+.nav-logo:hover {
+  filter: brightness(1.6);
+  transform: scale(1.05);
+}
+
+/* LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links li {
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -6px;
+  background: #27ae60;
+  transition: width 0.3s ease;
+}
+
+.nav-links li:hover {
+  color: #27ae60;
+  text-shadow: 0 0 10px #27ae60;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+}
+
+/* ICONS */
+.nav-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.icon {
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.icon:hover {
+  color: #27ae60;
+  transform: scale(1.2);
+}
+
+/* SOCIAL SECTION */
+.navbar-social {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 0 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.navbar-social a {
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.navbar-social a:hover {
+  color: #27ae60;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   RESPONSIVE NAVBAR
+========================= */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 25px;
+  }
+
+  .navbar-social {
+    gap: 15px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 12px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-social {
+    border: none;
+    gap: 15px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo {
+    width: 130px;
+  }
+
+  .nav-links li {
+    font-size: 14px;
+  }
+
+  .icon {
+    font-size: 14px;
+  }
+}
