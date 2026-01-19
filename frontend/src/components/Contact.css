@@ -1,0 +1,122 @@
+.contact {
+  padding: 100px 80px;
+  color: white;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: clamp(28px, 4vw, 36px);
+  margin-bottom: 50px;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Left Info */
+.contact-info {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 16px;
+  transition: all 0.4s ease;
+}
+
+.contact-info:hover {
+  box-shadow: 0 0 30px rgba(39, 174, 96, 0.6);
+}
+
+.contact-info h3 {
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  font-size: clamp(12px, 2.5vw, 14px);
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+.contact-details span {
+  display: block;
+  font-size: clamp(12px, 2.5vw, 14px);
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+
+/* Form */
+.contact-form {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: all 0.4s ease;
+}
+
+.contact-form:hover {
+  box-shadow: 0 0 30px rgba(39, 174, 96, 0.6);
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px 14px;
+  border-radius: 8px;
+  color: white;
+  outline: none;
+  font-size: clamp(12px, 2.5vw, 14px);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-form button {
+  background: #27ae60;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #1f8c4d;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact {
+    padding: 80px 20px;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+    padding: 20px;
+  }
+  
+  .contact-info {
+    padding: 20px;
+  }
+}
+
+.status-message {
+  margin-top: 10px;
+  color: green; /* error হলে red দিতে পারেন */
+  font-weight: 500;
+}
+
+
